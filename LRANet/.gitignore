@@ -1,0 +1,9 @@
+data
+Images
+results
+test_images
+test
+Groundtruth
+work_dirs
+*.zip
+.txt

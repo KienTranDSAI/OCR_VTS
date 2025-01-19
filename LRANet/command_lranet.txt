@@ -1,0 +1,12 @@
+1.Infer text detection for single image
+python -m tools.det_test_imgs /raid/kientdt/shared_drive_cv/ocr/kientdt/DetectionData/images/01_2004_CT-BXD img_list.txt /raid/kientdt/shared_drive_cv/ocr/kientdt/LRANet/configs/lranet/lranet_totaltext_det.py /raid/kientdt/shared_drive_cv/ocr/kientdt/LRANet/checkpoints/final_totaltext.pth
+
+
+
+
+2.Training
+CUDA_VISIBLE_DEVICES=1,2,3,5 ./tools/dist_train.sh configs/lranet/lranet_mydata_det.py work_dirs/mydata 4
+
+3.Convert dataset file
+python tools/data/textdet/mydata_converter.py /raid/kientdt/shared_drive_cv/ocr/kientdt/LRANet/data/mydata -o /raid/kientdt/shared_drive_cv/ocr/kientdt/LRANet/data/mydata --split-list training test
+python tools/data/textdet/mydata_converter.py /raid/kientdt/shared_drive_cv/ocr/kientdt/LRANet/data/mydata -o /raid/kientdt/shared_drive_cv/ocr/kientdt/LRANet/data/mydata -d mydata --split-list training test

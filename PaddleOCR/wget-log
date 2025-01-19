@@ -1,0 +1,8 @@
+Will not apply HSTS. The HSTS database must be a regular and non-world-writable file.
+ERROR: could not open HSTS store at '/raid/tungnt/.wget-hsts'. HSTS will be disabled.
+--2024-12-21 07:33:19--  https://rrc.cvc.uab.es/?com=downloads
+Resolving rrc.cvc.uab.es (rrc.cvc.uab.es)... 158.109.8.55
+Connecting to rrc.cvc.uab.es (rrc.cvc.uab.es)|158.109.8.55|:443... connected.
+ERROR: cannot verify rrc.cvc.uab.es's certificate, issued by ‘CN=GEANT OV RSA CA 4,O=GEANT Vereniging,C=NL’:
+  Unable to locally verify the issuer's authority.
+To connect to rrc.cvc.uab.es insecurely, use `--no-check-certificate'.
